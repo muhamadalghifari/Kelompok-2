@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, FlatList, StyleSheet, Button } from "react-native";
+import { View, Text, FlatList, StyleSheet } from "react-native";
 import SearchBar from "../components/SearchBar";
 import TermCard from "../components/TermCard";
 import { terms } from "../data/terms";
@@ -13,28 +13,7 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Kamus Istilah Kampus</Text>
-
-      {/* Navigasi antar halaman */}
-      <View style={styles.navButtons}>
-        <Button
-          title="Kategori"
-          onPress={() => navigation.navigate("Category")}
-          color="#2563EB"
-        />
-        <Button
-          title="Favorit"
-          onPress={() => navigation.navigate("Favorite")}
-          color="#16A34A"
-        />
-        <Button
-          title="Tambah Istilah"
-          onPress={() => navigation.navigate("AddTerm")}
-          color="#F59E0B"
-        />
-      </View>
-
-      {/* Search dan daftar istilah */}
+      <Text style={styles.title}>📘 Kamus Istilah Kampus</Text>
       <SearchBar value={search} onChangeText={setSearch} />
       <FlatList
         data={filteredTerms}
@@ -59,10 +38,5 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: "#1E3A8A",
     textAlign: "center",
-  },
-  navButtons: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 10,
   },
 });
