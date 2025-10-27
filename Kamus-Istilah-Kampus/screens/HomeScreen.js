@@ -15,12 +15,17 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.title}>Kamus Istilah Kampus</Text>
+        <Text style={styles.title}>📘 Kamus Istilah Kampus</Text>
+        <Text style={styles.subtitle}>Temukan makna istilah kampus dengan mudah</Text>
       </View>
 
       {/* Search bar */}
       <View style={styles.searchBox}>
-        <SearchBar value={search} onChangeText={setSearch} placeholder="Cari istilah..." />
+        <SearchBar
+          value={search}
+          onChangeText={setSearch}
+          placeholder="🔍 Cari istilah..."
+        />
       </View>
 
       {/* Daftar istilah */}
@@ -35,7 +40,7 @@ export default function HomeScreen({ navigation }) {
           />
         )}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 20 }}
+        contentContainerStyle={{ paddingBottom: 30 }}
       />
     </View>
   );
@@ -44,38 +49,42 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F0F4FF",
+    backgroundColor: "#F8FAFF",
     paddingHorizontal: 16,
     paddingTop: 20,
   },
   header: {
-    flexDirection: "row",
-    justifyContent: "center",
+    backgroundColor: "#3B82F6",
+    borderRadius: 18,
+    paddingVertical: 16,
+    marginBottom: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
     alignItems: "center",
-    marginBottom: 12,
-    paddingBottom: 8,
-    borderBottomWidth: 2,
-    borderColor: "#A5B4FC",
-  },
-  icon: {
-    fontSize: 24,
-    marginRight: 6,
   },
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "800",
-    color: "#1E3A8A",
-    letterSpacing: 0.5,
+    color: "#FFFFFF",
+    marginBottom: 4,
+  },
+  subtitle: {
+    fontSize: 13,
+    color: "#E0E7FF",
+    letterSpacing: 0.4,
   },
   searchBox: {
     backgroundColor: "#fff",
-    borderRadius: 12,
-    padding: 8,
+    borderRadius: 16,
+    padding: 10,
     marginBottom: 16,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.1,
-    shadowRadius: 3,
-    elevation: 3,
+    shadowRadius: 5,
+    elevation: 4,
   },
 });
