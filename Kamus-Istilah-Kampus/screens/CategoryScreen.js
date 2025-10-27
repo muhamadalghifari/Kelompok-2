@@ -15,7 +15,10 @@ const CategoryScreen = ({ navigation }) => {
     { id: 3, name: "Organisasi Mahasiswa", icon: "👥" },
     { id: 4, name: "Administrasi Kampus", icon: "📋" },
     { id: 5, name: "Teknologi & IT", icon: "💻" },
-    { id: 6, name: "Lain-lain", icon: "📦" }
+    { id: 6, name: "Beasiswa", icon: "🎓" },
+    { id: 7, name: "Kegiatan Kampus", icon: "🏫" },
+    { id: 8, name: "Perpustakaan", icon: "📖" },
+    { id: 9, name: "Lain-lain", icon: "📦" }, // dipindah ke paling bawah
   ];
 
   const handlePressCategory = (category) => {
@@ -65,7 +68,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#2c3e50',
+    color: '#1E3A8A',
   },
   listContainer: {
     padding: 16,
